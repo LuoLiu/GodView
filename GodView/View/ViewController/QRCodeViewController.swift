@@ -10,14 +10,29 @@ import UIKit
 
 class QRCodeViewController: BaseViewController {
 
+    var player: PlayerModel = PlayerModel(id: 0, role: .normal)
+
+    static func instance(player: PlayerModel) -> QRCodeViewController {
+        let sb = UIStoryboard(name: .main)
+        let vc = sb.instantiateViewControllerWithClass(type: QRCodeViewController.self)
+        vc.player = player
+
+        return vc
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        print("\(player.id)")
     }
 
     override func setupView() {
         super.setupView()
+
+    }
+
+    @IBAction func close(_ sender: Any) {
+        closeVC()
     }
 
 }

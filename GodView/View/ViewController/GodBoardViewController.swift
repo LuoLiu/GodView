@@ -21,6 +21,9 @@ class GodBoardViewController: BaseViewController {
 
     override func setupView() {
         super.setupView()
+
+        setBackButton()
+        tableView.tableFooterView = UIView()
     }
 
 }

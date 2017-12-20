@@ -11,6 +11,16 @@ import UIKit
 class PlayersViewController: BaseViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+
+    fileprivate var players: [PlayerModel] = []
+
+    static func instance(players: [PlayerModel]) -> PlayersViewController {
+        let sb = UIStoryboard(name: .main)
+        let vc = sb.instantiateViewControllerWithClass(type: PlayersViewController.self)
+        vc.players = players
+
+        return vc
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +30,51 @@ class PlayersViewController: BaseViewController {
 
     override func setupView() {
         super.setupView()
+
+        setBackButton()
+        
+        collectionView.register(UINib(nibName: PlayerCardCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: PlayerCardCollectionViewCell.identifier)
     }
     
+}
+
+extension PlayersViewController: UICollectionViewDataSource {
+
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return players.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlayerCardCollectionViewCell.identifier, for: indexPath) as! PlayerCardCollectionViewCell
+        let player = players[indexPath.item]
+        cell.configWith(player: player)
+
+        return cell
+    }
+
+}
+
+extension PlayersViewController: UICollectionViewDelegate {
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let player = players[indexPath.item]
+        let vc = QRCodeViewController.instance(player: player)
+
+        self.present(vc, animated: true, completion: nil)
+    }
+
+}
+
+extension PlayersViewController: UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width: CGFloat = (collectionView.width-20*2-10*2)/3
+
+        return CGSize(width: width, height: width)
+    }
+
 }

@@ -6,8 +6,9 @@ target 'GodView' do
   use_frameworks!
 
   # Pods for GodView
-  pod 'RxSwift', '3.2.0'
-  pod 'RxCocoa', '3.2.0'
+  pod 'RxSwift', '4.0.0'
+  pod 'RxCocoa', '4.0.0'
+  pod 'Hero', '1.0.1'
 
   post_install do |installer|
       installer.pods_project.targets.each do |target|

@@ -19,6 +19,15 @@
 		9CBB6C0C1FE8CB1600CBE73C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBB6C0B1FE8CB1600CBE73C /* BaseViewController.swift */; };
 		9CBB6C0E1FE8CBCA00CBE73C /* GodBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBB6C0D1FE8CBCA00CBE73C /* GodBoardViewController.swift */; };
 		9CBB6C101FE8CC2100CBE73C /* WolfKillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBB6C0F1FE8CC2100CBE73C /* WolfKillViewController.swift */; };
+		9CBB6C131FEA393700CBE73C /* PlayerCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBB6C111FEA393700CBE73C /* PlayerCardCollectionViewCell.swift */; };
+		9CBB6C141FEA393700CBE73C /* PlayerCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CBB6C121FEA393700CBE73C /* PlayerCardCollectionViewCell.xib */; };
+		9CC6FBDE1FEA49D500620FFC /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC6FBDD1FEA49D500620FFC /* UIViewController+Extension.swift */; };
+		9CC6FBE01FEA4ADF00620FFC /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC6FBDF1FEA4ADF00620FFC /* UIStoryboard+Extension.swift */; };
+		9CC6FBE61FEA580300620FFC /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC6FBE51FEA580300620FFC /* PlayerModel.swift */; };
+		9CC6FBE81FEA5A6400620FFC /* WolfKillGameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC6FBE71FEA5A6400620FFC /* WolfKillGameManager.swift */; };
+		9CC6FBEB1FEA631100620FFC /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC6FBE91FEA631100620FFC /* HomeTableViewCell.swift */; };
+		9CC6FBEC1FEA631100620FFC /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CC6FBEA1FEA631100620FFC /* HomeTableViewCell.xib */; };
+		9CC6FBEF1FEA678900620FFC /* WolfKillGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC6FBEE1FEA678900620FFC /* WolfKillGameModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +46,15 @@
 		9CBB6C0B1FE8CB1600CBE73C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9CBB6C0D1FE8CBCA00CBE73C /* GodBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GodBoardViewController.swift; sourceTree = "<group>"; };
 		9CBB6C0F1FE8CC2100CBE73C /* WolfKillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WolfKillViewController.swift; sourceTree = "<group>"; };
+		9CBB6C111FEA393700CBE73C /* PlayerCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCardCollectionViewCell.swift; sourceTree = "<group>"; };
+		9CBB6C121FEA393700CBE73C /* PlayerCardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerCardCollectionViewCell.xib; sourceTree = "<group>"; };
+		9CC6FBDD1FEA49D500620FFC /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		9CC6FBDF1FEA4ADF00620FFC /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
+		9CC6FBE51FEA580300620FFC /* PlayerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
+		9CC6FBE71FEA5A6400620FFC /* WolfKillGameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WolfKillGameManager.swift; sourceTree = "<group>"; };
+		9CC6FBE91FEA631100620FFC /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		9CC6FBEA1FEA631100620FFC /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		9CC6FBEE1FEA678900620FFC /* WolfKillGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WolfKillGameModel.swift; sourceTree = "<group>"; };
 		C2A9E0F5F186EE2DF85515EC /* Pods-GodView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GodView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GodView/Pods-GodView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				9CBB6BED1FE8C57F00CBE73C /* AppDelegate.swift */,
+				9CC6FBED1FEA66EF00620FFC /* Service */,
+				9CC6FBE41FEA580300620FFC /* Model */,
 				9CBB6C041FE8C89000CBE73C /* View */,
 				9CBB6C021FE8C86600CBE73C /* Utils */,
 				9CBB6C061FE8C8AA00CBE73C /* Resource */,
@@ -94,6 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				9CBB6BFF1FE8C85200CBE73C /* UIView+Extension.swift */,
+				9CC6FBDD1FEA49D500620FFC /* UIViewController+Extension.swift */,
+				9CC6FBDF1FEA4ADF00620FFC /* UIStoryboard+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -119,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				9CBB6C051FE8C89600CBE73C /* ViewController */,
+				9CBB6C151FEA393D00CBE73C /* Cells */,
 				9CBB6C031FE8C87A00CBE73C /* Storyboards */,
 			);
 			path = View;
@@ -143,6 +166,34 @@
 				9CBB6BF41FE8C57F00CBE73C /* Assets.xcassets */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		9CBB6C151FEA393D00CBE73C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9CBB6C111FEA393700CBE73C /* PlayerCardCollectionViewCell.swift */,
+				9CBB6C121FEA393700CBE73C /* PlayerCardCollectionViewCell.xib */,
+				9CC6FBE91FEA631100620FFC /* HomeTableViewCell.swift */,
+				9CC6FBEA1FEA631100620FFC /* HomeTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		9CC6FBE41FEA580300620FFC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9CC6FBEE1FEA678900620FFC /* WolfKillGameModel.swift */,
+				9CC6FBE51FEA580300620FFC /* PlayerModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9CC6FBED1FEA66EF00620FFC /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				9CC6FBE71FEA5A6400620FFC /* WolfKillGameManager.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		F1E5B8B4A51EA603DD98BDD2 /* Pods */ = {
@@ -217,7 +268,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CBB6BF81FE8C57F00CBE73C /* LaunchScreen.storyboard in Resources */,
+				9CBB6C141FEA393700CBE73C /* PlayerCardCollectionViewCell.xib in Resources */,
 				9CBB6BF51FE8C57F00CBE73C /* Assets.xcassets in Resources */,
+				9CC6FBEC1FEA631100620FFC /* HomeTableViewCell.xib in Resources */,
 				9CBB6BF31FE8C57F00CBE73C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,11 +300,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GodView/Pods-GodView-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
@@ -285,14 +340,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CC6FBEF1FEA678900620FFC /* WolfKillGameModel.swift in Sources */,
+				9CBB6C131FEA393700CBE73C /* PlayerCardCollectionViewCell.swift in Sources */,
+				9CC6FBE01FEA4ADF00620FFC /* UIStoryboard+Extension.swift in Sources */,
+				9CC6FBEB1FEA631100620FFC /* HomeTableViewCell.swift in Sources */,
 				9CBB6C001FE8C85200CBE73C /* UIView+Extension.swift in Sources */,
 				9CBB6C081FE8CAE000CBE73C /* PlayersViewController.swift in Sources */,
 				9CBB6C101FE8CC2100CBE73C /* WolfKillViewController.swift in Sources */,
 				9CBB6C0E1FE8CBCA00CBE73C /* GodBoardViewController.swift in Sources */,
+				9CC6FBE61FEA580300620FFC /* PlayerModel.swift in Sources */,
 				9CBB6BF01FE8C57F00CBE73C /* HomeViewController.swift in Sources */,
 				9CBB6BEE1FE8C57F00CBE73C /* AppDelegate.swift in Sources */,
 				9CBB6C0A1FE8CAF600CBE73C /* QRCodeViewController.swift in Sources */,
+				9CC6FBDE1FEA49D500620FFC /* UIViewController+Extension.swift in Sources */,
 				9CBB6C0C1FE8CB1600CBE73C /* BaseViewController.swift in Sources */,
+				9CC6FBE81FEA5A6400620FFC /* WolfKillGameManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

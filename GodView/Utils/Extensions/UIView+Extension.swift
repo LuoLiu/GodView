@@ -58,6 +58,24 @@ extension UIView {
         }
     }
 
+    var width: CGFloat {
+        set {
+            self.frame.size.width = newValue
+        }
+        get {
+            return self.frame.size.width
+        }
+    }
+
+    var height: CGFloat {
+        set {
+            self.frame.size.height = newValue
+        }
+        get {
+            return self.frame.size.height
+        }
+    }
+
     var x: CGFloat {
         set {
             self.frame.origin.x = newValue
