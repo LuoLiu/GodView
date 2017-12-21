@@ -10,12 +10,23 @@ import UIKit
 
 class WolfKillViewController: BaseViewController {
 
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var roleLabel: UILabel!
+    
+    fileprivate var player = PlayerModel()
+
+    static func instance(player: PlayerModel) -> WolfKillViewController {
+        let sb = UIStoryboard(name: .main)
+        let vc = sb.instantiateViewControllerWithClass(type: WolfKillViewController.self)
+        vc.player = player
+
+        return vc
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        roleLabel.text = player.role.rawValue
     }
 
     override func setupView() {

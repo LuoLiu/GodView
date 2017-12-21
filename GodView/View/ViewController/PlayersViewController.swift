@@ -8,16 +8,23 @@
 
 import UIKit
 
+enum UserMode {
+    case player
+    case god
+}
+
 class PlayersViewController: BaseViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
 
     fileprivate var players: [PlayerModel] = []
+    fileprivate var userMode: UserMode = .player
 
-    static func instance(players: [PlayerModel]) -> PlayersViewController {
+    static func instance(players: [PlayerModel], userMode: UserMode) -> PlayersViewController {
         let sb = UIStoryboard(name: .main)
         let vc = sb.instantiateViewControllerWithClass(type: PlayersViewController.self)
         vc.players = players
+        vc.userMode = userMode
 
         return vc
     }
@@ -62,9 +69,15 @@ extension PlayersViewController: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let player = players[indexPath.item]
-        let vc = QRCodeViewController.instance(player: player)
 
-        self.present(vc, animated: true, completion: nil)
+        switch userMode {
+        case .player:
+            let vc = QRCodeViewController.instance(player: player)
+            self.present(vc, animated: true, completion: nil)
+        case .god:
+            let vc = WolfKillViewController.instance(player: player)
+            self.present(vc, animated: true, completion: nil)
+        }
     }
 
 }

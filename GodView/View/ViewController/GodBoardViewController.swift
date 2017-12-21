@@ -11,12 +11,13 @@ import UIKit
 class GodBoardViewController: BaseViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var addButton: UIButton!
+
+    fileprivate var dayResults: [WolfKillResultOnDay] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        tableView.reloadData()
     }
 
     override func setupView() {
@@ -24,6 +25,49 @@ class GodBoardViewController: BaseViewController {
 
         setBackButton()
         tableView.tableFooterView = UIView()
+        tableView.register(UINib(nibName: ContentWithNumTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: ContentWithNumTableViewCell.identifier)
     }
 
+    @IBAction func addDay(_ sender: Any) {
+        let day = dayResults.count+1
+        let res = WolfKillResultOnDay(day: day, deadPlayers: [])
+        dayResults.append(res)
+        
+        tableView.reloadData()
+    }
+
+}
+
+extension GodBoardViewController: UITableViewDataSource {
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dayResults.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: ContentWithNumTableViewCell.identifier, for: indexPath) as! ContentWithNumTableViewCell
+        cell.configWith(result: dayResults[indexPath.row])
+
+        return cell
+    }
+
+}
+
+extension GodBoardViewController : UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+
+        let players = WolfKillGameManager.shared.players
+        let vc = PlayersViewController.instance(players: players, userMode: .god)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90
+    }
 }

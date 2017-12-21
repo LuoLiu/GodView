@@ -14,3 +14,8 @@ struct WolfKillGameModel {
     var gameTitle: String = ""
     var gameDetail: String = ""
 }
+
+struct WolfKillResultOnDay {
+    var day: Int = 0
+    var deadPlayers: [PlayerModel] = []
+}

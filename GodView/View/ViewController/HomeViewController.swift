@@ -22,7 +22,7 @@ class HomeViewController: BaseViewController {
         super.setupView()
 
         tableView.tableFooterView = UIView()
-        tableView.register(UINib(nibName: HomeTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: HomeTableViewCell.identifier)
+        tableView.register(UINib(nibName: ContentWithNumTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: ContentWithNumTableViewCell.identifier)
     }
 
 }
@@ -38,7 +38,7 @@ extension HomeViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier, for: indexPath) as! HomeTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: ContentWithNumTableViewCell.identifier, for: indexPath) as! ContentWithNumTableViewCell
 
         if let game = gameForIndexPath(indexPath, createPlayers: false) {
             cell.configWith(game: game)
@@ -54,7 +54,7 @@ extension HomeViewController : UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
 
         if let game = gameForIndexPath(indexPath, createPlayers: true) {
-            let vc = PlayersViewController.instance(players: game.players)
+            let vc = PlayersViewController.instance(players: game.players, userMode: .player)
             navigationController?.pushViewController(vc, animated: true)
         }
     }

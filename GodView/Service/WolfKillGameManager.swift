@@ -23,6 +23,8 @@ class WolfKillGameManager {
 
     static var shared = WolfKillGameManager()
 
+    var players: [PlayerModel] = []
+
     func createGame(num: PlayerNum, createPlayers: Bool) -> WolfKillGameModel {
         var game = WolfKillGameModel(numOfPlayers: 0, players: [], gameTitle: "", gameDetail: "")
         game.numOfPlayers = num.rawValue
@@ -34,6 +36,7 @@ class WolfKillGameManager {
 
         game.gameTitle = WolfKillGameConst.titles[num] ?? ""
         game.gameDetail = WolfKillGameConst.details[num] ?? ""
+        self.players = game.players
 
         return game
     }

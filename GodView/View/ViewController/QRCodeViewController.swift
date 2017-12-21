@@ -25,12 +25,12 @@ class QRCodeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        roleLabel.text = player.role.rawValue
     }
 
     override func setupView() {
         super.setupView()
 
-        roleLabel.text = player.role.rawValue
     }
 
     @IBAction func close(_ sender: Any) {

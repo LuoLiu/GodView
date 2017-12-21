@@ -25,8 +25,8 @@
 		9CC6FBE01FEA4ADF00620FFC /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC6FBDF1FEA4ADF00620FFC /* UIStoryboard+Extension.swift */; };
 		9CC6FBE61FEA580300620FFC /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC6FBE51FEA580300620FFC /* PlayerModel.swift */; };
 		9CC6FBE81FEA5A6400620FFC /* WolfKillGameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC6FBE71FEA5A6400620FFC /* WolfKillGameManager.swift */; };
-		9CC6FBEB1FEA631100620FFC /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC6FBE91FEA631100620FFC /* HomeTableViewCell.swift */; };
-		9CC6FBEC1FEA631100620FFC /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CC6FBEA1FEA631100620FFC /* HomeTableViewCell.xib */; };
+		9CC6FBEB1FEA631100620FFC /* ContentWithNumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC6FBE91FEA631100620FFC /* ContentWithNumTableViewCell.swift */; };
+		9CC6FBEC1FEA631100620FFC /* ContentWithNumTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CC6FBEA1FEA631100620FFC /* ContentWithNumTableViewCell.xib */; };
 		9CC6FBEF1FEA678900620FFC /* WolfKillGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC6FBEE1FEA678900620FFC /* WolfKillGameModel.swift */; };
 		9CC6FBF11FEB622400620FFC /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC6FBF01FEB622300620FFC /* Const.swift */; };
 /* End PBXBuildFile section */
@@ -53,8 +53,8 @@
 		9CC6FBDF1FEA4ADF00620FFC /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
 		9CC6FBE51FEA580300620FFC /* PlayerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
 		9CC6FBE71FEA5A6400620FFC /* WolfKillGameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WolfKillGameManager.swift; sourceTree = "<group>"; };
-		9CC6FBE91FEA631100620FFC /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
-		9CC6FBEA1FEA631100620FFC /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		9CC6FBE91FEA631100620FFC /* ContentWithNumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentWithNumTableViewCell.swift; sourceTree = "<group>"; };
+		9CC6FBEA1FEA631100620FFC /* ContentWithNumTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentWithNumTableViewCell.xib; sourceTree = "<group>"; };
 		9CC6FBEE1FEA678900620FFC /* WolfKillGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WolfKillGameModel.swift; sourceTree = "<group>"; };
 		9CC6FBF01FEB622300620FFC /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		C2A9E0F5F186EE2DF85515EC /* Pods-GodView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GodView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GodView/Pods-GodView.debug.xcconfig"; sourceTree = "<group>"; };
@@ -176,8 +176,8 @@
 			children = (
 				9CBB6C111FEA393700CBE73C /* PlayerCardCollectionViewCell.swift */,
 				9CBB6C121FEA393700CBE73C /* PlayerCardCollectionViewCell.xib */,
-				9CC6FBE91FEA631100620FFC /* HomeTableViewCell.swift */,
-				9CC6FBEA1FEA631100620FFC /* HomeTableViewCell.xib */,
+				9CC6FBE91FEA631100620FFC /* ContentWithNumTableViewCell.swift */,
+				9CC6FBEA1FEA631100620FFC /* ContentWithNumTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -273,7 +273,7 @@
 				9CBB6BF81FE8C57F00CBE73C /* LaunchScreen.storyboard in Resources */,
 				9CBB6C141FEA393700CBE73C /* PlayerCardCollectionViewCell.xib in Resources */,
 				9CBB6BF51FE8C57F00CBE73C /* Assets.xcassets in Resources */,
-				9CC6FBEC1FEA631100620FFC /* HomeTableViewCell.xib in Resources */,
+				9CC6FBEC1FEA631100620FFC /* ContentWithNumTableViewCell.xib in Resources */,
 				9CBB6BF31FE8C57F00CBE73C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,7 +346,7 @@
 				9CC6FBEF1FEA678900620FFC /* WolfKillGameModel.swift in Sources */,
 				9CBB6C131FEA393700CBE73C /* PlayerCardCollectionViewCell.swift in Sources */,
 				9CC6FBE01FEA4ADF00620FFC /* UIStoryboard+Extension.swift in Sources */,
-				9CC6FBEB1FEA631100620FFC /* HomeTableViewCell.swift in Sources */,
+				9CC6FBEB1FEA631100620FFC /* ContentWithNumTableViewCell.swift in Sources */,
 				9CBB6C001FE8C85200CBE73C /* UIView+Extension.swift in Sources */,
 				9CBB6C081FE8CAE000CBE73C /* PlayersViewController.swift in Sources */,
 				9CBB6C101FE8CC2100CBE73C /* WolfKillViewController.swift in Sources */,
