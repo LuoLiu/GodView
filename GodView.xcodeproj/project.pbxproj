@@ -28,6 +28,7 @@
 		9CC6FBEB1FEA631100620FFC /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC6FBE91FEA631100620FFC /* HomeTableViewCell.swift */; };
 		9CC6FBEC1FEA631100620FFC /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CC6FBEA1FEA631100620FFC /* HomeTableViewCell.xib */; };
 		9CC6FBEF1FEA678900620FFC /* WolfKillGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC6FBEE1FEA678900620FFC /* WolfKillGameModel.swift */; };
+		9CC6FBF11FEB622400620FFC /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC6FBF01FEB622300620FFC /* Const.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		9CC6FBE91FEA631100620FFC /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		9CC6FBEA1FEA631100620FFC /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		9CC6FBEE1FEA678900620FFC /* WolfKillGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WolfKillGameModel.swift; sourceTree = "<group>"; };
+		9CC6FBF01FEB622300620FFC /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		C2A9E0F5F186EE2DF85515EC /* Pods-GodView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GodView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GodView/Pods-GodView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				9CBB6C011FE8C85700CBE73C /* Extensions */,
+				9CC6FBF01FEB622300620FFC /* Const.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				9CBB6BEE1FE8C57F00CBE73C /* AppDelegate.swift in Sources */,
 				9CBB6C0A1FE8CAF600CBE73C /* QRCodeViewController.swift in Sources */,
 				9CC6FBDE1FEA49D500620FFC /* UIViewController+Extension.swift in Sources */,
+				9CC6FBF11FEB622400620FFC /* Const.swift in Sources */,
 				9CBB6C0C1FE8CB1600CBE73C /* BaseViewController.swift in Sources */,
 				9CC6FBE81FEA5A6400620FFC /* WolfKillGameManager.swift in Sources */,
 			);

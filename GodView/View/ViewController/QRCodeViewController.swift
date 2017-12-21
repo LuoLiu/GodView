@@ -10,6 +10,8 @@ import UIKit
 
 class QRCodeViewController: BaseViewController {
 
+    @IBOutlet weak var roleLabel: UILabel!
+
     var player: PlayerModel = PlayerModel(id: 0, role: .normal)
 
     static func instance(player: PlayerModel) -> QRCodeViewController {
@@ -23,12 +25,12 @@ class QRCodeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print("\(player.id)")
     }
 
     override func setupView() {
         super.setupView()
 
+        roleLabel.text = player.role.rawValue
     }
 
     @IBAction func close(_ sender: Any) {

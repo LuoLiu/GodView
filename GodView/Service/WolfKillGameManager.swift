@@ -23,68 +23,82 @@ class WolfKillGameManager {
 
     static var shared = WolfKillGameManager()
 
-    func createGame(num: PlayerNum) -> WolfKillGameModel {
+    func createGame(num: PlayerNum, createPlayers: Bool) -> WolfKillGameModel {
         var game = WolfKillGameModel(numOfPlayers: 0, players: [], gameTitle: "", gameDetail: "")
         game.numOfPlayers = num.rawValue
-        game.players = createPlayers(num: num)
-
-        switch num {
-        case .num6:
-            game.gameTitle = "六人局"
-            game.gameDetail = "3民2狼1女巫"
-        case .num7:
-            game.gameTitle = "七人局"
-            game.gameDetail = "3民2狼1女巫1预言家"
-        case .num8:
-            game.gameTitle = "八人局"
-            game.gameDetail = "3民3狼1女巫1预言家"
-        case .num9:
-            game.gameTitle = "九人局"
-            game.gameDetail = "3民3狼1女巫1预言家1猎人"
-        case .num10:
-            game.gameTitle = "十人局"
-            game.gameDetail = "4民3狼1女巫1预言家1猎人"
-        case .num11:
-            game.gameTitle = "十一人局"
-            game.gameDetail = "4民4狼1女巫1预言家1猎人"
-        case .num12:
-            game.gameTitle = "十二人局"
-            game.gameDetail = "4民4狼1女巫1预言家1猎人1白痴"
+        if createPlayers {
+            game.players = self.createPlayers(num: num).sorted { $0.id < $1.id }
+        } else {
+            game.players = []
         }
+
+        game.gameTitle = WolfKillGameConst.titles[num] ?? ""
+        game.gameDetail = WolfKillGameConst.details[num] ?? ""
 
         return game
     }
 
     private func createPlayers(num: PlayerNum) -> [PlayerModel] {
         var players: [PlayerModel] = []
+        let roles: [PlayerType] = allRoles(num: num)
 
-//        let normal1 = PlayerModel(id: 1, role: .normal)
-//        case .num6:
-//
-//        case .num7:
-//        game.gameTitle = "七人局"
-//        game.gameDetail = "3民2狼1女巫1预言家"
-//        case .num8:
-//        game.gameTitle = "八人局"
-//        game.gameDetail = "3民3狼1女巫1预言家"
-//        case .num9:
-//        game.gameTitle = "九人局"
-//        game.gameDetail = "3民3狼1女巫1预言家1猎人"
-//        case .num10:
-//        game.gameTitle = "十人局"
-//        game.gameDetail = "4民3狼1女巫1预言家1猎人"
-//        case .num11:
-//        game.gameTitle = "十一人局"
-//        game.gameDetail = "4民4狼1女巫1预言家1猎人"
-//        case .num12:
-//
-//    }
-        for id in 0...num.rawValue {
-            let role = PlayerModel(id: id, role: .normal)
-            players.append(role)
+        let randomGenerator = Int.createRandomGenerator(range: 1...num.rawValue)
+        for role in roles {
+            if let id = randomGenerator() {
+                let player = PlayerModel(id: id, role: role)
+                players.append(player)
+            }
         }
 
         return players
     }
+
+    fileprivate func allRoles(num: PlayerNum) -> [PlayerType] {
+        var roles: [PlayerType] = [.normal, .normal, .normal, .killer, .killer, .witch]
+
+        guard num.rawValue > PlayerNum.num6.rawValue else { return roles }
+        roles.append(.seer)
+
+        guard num.rawValue > PlayerNum.num7.rawValue else { return roles }
+        roles.append(.killer)
+
+        guard num.rawValue > PlayerNum.num8.rawValue else { return roles }
+        roles.append(.hunter)
+
+        guard num.rawValue > PlayerNum.num9.rawValue else { return roles }
+        roles.append(.normal)
+
+        guard num.rawValue > PlayerNum.num10.rawValue else { return roles }
+        roles.append(.killer)
+
+        guard num.rawValue > PlayerNum.num11.rawValue else { return roles }
+        roles.append(.idiot)
+
+        return roles
+    }
     
+}
+
+extension Int {
+
+    static func createRandomGenerator(range: ClosedRange<Int>) -> (() -> Int?) {
+        let min = range.lowerBound
+        let max = range.upperBound
+        var nums: [Int] = []
+        for i in min...max{
+            nums.append(i)
+        }
+
+        func randomGenerator() -> Int? {
+            if nums.isEmpty == false {
+                let index = Int(arc4random_uniform(UInt32(nums.count)))
+                return nums.remove(at: index)
+            } else {
+                return nil
+            }
+        }
+
+        return randomGenerator
+    }
+
 }

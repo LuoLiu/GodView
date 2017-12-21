@@ -13,7 +13,6 @@ import RxCocoa
 class HomeViewController: BaseViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var startButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +40,7 @@ extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier, for: indexPath) as! HomeTableViewCell
 
-        if let game = gameForIndexPath(indexPath) {
+        if let game = gameForIndexPath(indexPath, createPlayers: false) {
             cell.configWith(game: game)
         }
 
@@ -54,7 +53,7 @@ extension HomeViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
-        if let game = gameForIndexPath(indexPath) {
+        if let game = gameForIndexPath(indexPath, createPlayers: true) {
             let vc = PlayersViewController.instance(players: game.players)
             navigationController?.pushViewController(vc, animated: true)
         }
@@ -67,10 +66,10 @@ extension HomeViewController : UITableViewDelegate {
 
 extension HomeViewController {
 
-    fileprivate func gameForIndexPath(_ indexPath: IndexPath) -> WolfKillGameModel? {
+    fileprivate func gameForIndexPath(_ indexPath: IndexPath, createPlayers: Bool) -> WolfKillGameModel? {
         let num = PlayerNum.num6.rawValue + indexPath.row
         if let playerNum = PlayerNum(rawValue: num) {
-            return WolfKillGameManager.shared.createGame(num: playerNum)
+            return WolfKillGameManager.shared.createGame(num: playerNum, createPlayers: createPlayers)
         }
         return nil
     }

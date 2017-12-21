@@ -9,12 +9,12 @@
 import UIKit
 
 enum PlayerType: String {
-    case normal     // 平民
-    case killer     // 狼人
-    case witch      // 女巫
-    case seer       // 预言家
-    case hunter     // 猎人
-    case idiot      // 白痴
+    case normal = "平民"
+    case killer = "狼人"
+    case witch = "女巫"
+    case seer = "预言家"
+    case hunter = "猎人"
+    case idiot = "白痴"
 }
 
 struct PlayerModel {
