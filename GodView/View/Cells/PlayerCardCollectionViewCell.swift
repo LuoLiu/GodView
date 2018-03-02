@@ -13,14 +13,21 @@ class PlayerCardCollectionViewCell: UICollectionViewCell {
     static let identifier = "PlayerCardCollectionViewCell"
 
     @IBOutlet weak var numLabel: UILabel!
+    @IBOutlet weak var roleLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    func configWith(player: PlayerModel) {
+    func configWith(player: PlayerModel, userMode: UserMode) {
         numLabel.text = "\(player.id)"
+        if userMode == .god {
+            roleLabel.isHidden = false
+            roleLabel.text = player.role.rawValue
+        } else {
+            roleLabel.isHidden = true
+        }
     }
 
 }

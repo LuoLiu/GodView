@@ -32,5 +32,9 @@ class WolfKillViewController: BaseViewController {
     override func setupView() {
         super.setupView()
     }
+
+    @IBAction func close(_ sender: Any) {
+        closeVC()
+    }
     
 }

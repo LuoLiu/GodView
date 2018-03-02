@@ -16,6 +16,7 @@ enum UserMode {
 class PlayersViewController: BaseViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var godButton: UIButton!
 
     fileprivate var players: [PlayerModel] = []
     fileprivate var userMode: UserMode = .player
@@ -31,18 +32,34 @@ class PlayersViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func setupView() {
         super.setupView()
 
+        self.title = TilteConst.playerVC
         setBackButton()
-        
+        godButton.addTarget(self, action: #selector(showGodView), for: .touchUpInside)
+
         collectionView.register(UINib(nibName: PlayerCardCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: PlayerCardCollectionViewCell.identifier)
     }
     
+}
+
+extension PlayersViewController {
+    @objc fileprivate func showGodView() {
+        if userMode == .player {
+            userMode = .god
+            collectionView.reloadData()
+            godButton.setTitle(ButtonConst.reStart, for: .normal)
+        } else {
+            let cancelAction = UIAlertAction(title: AlertConst.cancel, style: .default, handler: nil)
+            let confirmAction = UIAlertAction(title: AlertConst.ok, style: .default, handler: { [unowned self] _ in
+                self.goBack()
+            })
+            AlertHelper.showAlert(message: AlertConst.reStartMsg, cancelAction: cancelAction, confirmAction: confirmAction)
+        }
+    }
 }
 
 extension PlayersViewController: UICollectionViewDataSource {
@@ -58,7 +75,7 @@ extension PlayersViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlayerCardCollectionViewCell.identifier, for: indexPath) as! PlayerCardCollectionViewCell
         let player = players[indexPath.item]
-        cell.configWith(player: player)
+        cell.configWith(player: player, userMode: userMode)
 
         return cell
     }

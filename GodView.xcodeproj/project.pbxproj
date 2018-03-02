@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		23B18B02D35FED27F1FDC8B4 /* Pods_GodView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D3F0DD97F16A18B59E2FCCD /* Pods_GodView.framework */; };
+		9CA633402049555E004CF677 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA6333F2049555E004CF677 /* AlertHelper.swift */; };
+		9CA6334220495598004CF677 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA6334120495598004CF677 /* UIApplication+Extension.swift */; };
 		9CBB6BEE1FE8C57F00CBE73C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBB6BED1FE8C57F00CBE73C /* AppDelegate.swift */; };
 		9CBB6BF01FE8C57F00CBE73C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBB6BEF1FE8C57F00CBE73C /* HomeViewController.swift */; };
 		9CBB6BF31FE8C57F00CBE73C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CBB6BF11FE8C57F00CBE73C /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* Begin PBXFileReference section */
 		3D3F0DD97F16A18B59E2FCCD /* Pods_GodView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GodView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B17A6DEFF05A6E500871552 /* Pods-GodView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GodView.release.xcconfig"; path = "Pods/Target Support Files/Pods-GodView/Pods-GodView.release.xcconfig"; sourceTree = "<group>"; };
+		9CA6333F2049555E004CF677 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
+		9CA6334120495598004CF677 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		9CBB6BEA1FE8C57F00CBE73C /* GodView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GodView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CBB6BED1FE8C57F00CBE73C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CBB6BEF1FE8C57F00CBE73C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 				9CBB6BFF1FE8C85200CBE73C /* UIView+Extension.swift */,
 				9CC6FBDD1FEA49D500620FFC /* UIViewController+Extension.swift */,
 				9CC6FBDF1FEA4ADF00620FFC /* UIStoryboard+Extension.swift */,
+				9CA6334120495598004CF677 /* UIApplication+Extension.swift */,
+				9CA6333F2049555E004CF677 /* AlertHelper.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -347,6 +353,7 @@
 				9CBB6C131FEA393700CBE73C /* PlayerCardCollectionViewCell.swift in Sources */,
 				9CC6FBE01FEA4ADF00620FFC /* UIStoryboard+Extension.swift in Sources */,
 				9CC6FBEB1FEA631100620FFC /* ContentWithNumTableViewCell.swift in Sources */,
+				9CA6334220495598004CF677 /* UIApplication+Extension.swift in Sources */,
 				9CBB6C001FE8C85200CBE73C /* UIView+Extension.swift in Sources */,
 				9CBB6C081FE8CAE000CBE73C /* PlayersViewController.swift in Sources */,
 				9CBB6C101FE8CC2100CBE73C /* WolfKillViewController.swift in Sources */,
@@ -355,6 +362,7 @@
 				9CBB6BF01FE8C57F00CBE73C /* HomeViewController.swift in Sources */,
 				9CBB6BEE1FE8C57F00CBE73C /* AppDelegate.swift in Sources */,
 				9CBB6C0A1FE8CAF600CBE73C /* QRCodeViewController.swift in Sources */,
+				9CA633402049555E004CF677 /* AlertHelper.swift in Sources */,
 				9CC6FBDE1FEA49D500620FFC /* UIViewController+Extension.swift in Sources */,
 				9CC6FBF11FEB622400620FFC /* Const.swift in Sources */,
 				9CBB6C0C1FE8CB1600CBE73C /* BaseViewController.swift in Sources */,

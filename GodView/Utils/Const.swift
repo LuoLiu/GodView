@@ -8,8 +8,21 @@
 
 import Foundation
 
-struct Const {
+struct TilteConst {
+    static let playerVC = "身份查看"
 
+}
+
+struct ButtonConst {
+    static let reStart = "重新开局"
+
+}
+
+struct AlertConst {
+    static let cancel = "取消"
+    static let ok = "确定"
+    static let close = "关闭"
+    static let reStartMsg = "确定重新开始吗？已有的游戏记录将丢失。"
 }
 
 struct WolfKillGameConst {
