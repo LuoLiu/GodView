@@ -13,7 +13,7 @@
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="GodView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="HomeViewController" customModule="GodView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,7 +70,7 @@
         <!--Code View Controller-->
         <scene sceneID="BWK-k8-YTH">
             <objects>
-                <viewController storyboardIdentifier="QRCodeViewController" id="dhx-hE-BbQ" customClass="QRCodeViewController" customModule="GodView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QRCodeViewController" automaticallyAdjustsScrollViewInsets="NO" id="dhx-hE-BbQ" customClass="QRCodeViewController" customModule="GodView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YWk-2M-TZ7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -118,7 +118,7 @@
         <!--Players View Controller-->
         <scene sceneID="Vhe-10-ycm">
             <objects>
-                <viewController storyboardIdentifier="PlayersViewController" id="rVb-vb-rAK" customClass="PlayersViewController" customModule="GodView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlayersViewController" automaticallyAdjustsScrollViewInsets="NO" id="rVb-vb-rAK" customClass="PlayersViewController" customModule="GodView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y1u-Cg-eDz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -191,7 +191,7 @@
         <!--God Board View Controller-->
         <scene sceneID="WFE-pC-i3C">
             <objects>
-                <viewController storyboardIdentifier="GodBoardViewController" id="Wip-NX-uQh" customClass="GodBoardViewController" customModule="GodView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GodBoardViewController" automaticallyAdjustsScrollViewInsets="NO" id="Wip-NX-uQh" customClass="GodBoardViewController" customModule="GodView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wiW-9c-6Yp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -247,7 +247,7 @@
         <!--Wolf Kill View Controller-->
         <scene sceneID="DyE-zy-Kdm">
             <objects>
-                <viewController storyboardIdentifier="WolfKillViewController" id="VH5-Og-trv" customClass="WolfKillViewController" customModule="GodView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WolfKillViewController" automaticallyAdjustsScrollViewInsets="NO" id="VH5-Og-trv" customClass="WolfKillViewController" customModule="GodView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xay-Tj-nqJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
