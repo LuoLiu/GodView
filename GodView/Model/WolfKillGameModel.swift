@@ -17,5 +17,4 @@ struct WolfKillGameModel {
 
 struct WolfKillResultOnDay {
     var day: Int = 0
-    var deadPlayers: [PlayerModel] = []
 }

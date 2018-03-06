@@ -170,7 +170,7 @@
                                     <constraint firstAttribute="height" constant="60" id="av3-gk-GP5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <state key="normal" title="开始记录">
+                                <state key="normal" title="记录板">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>

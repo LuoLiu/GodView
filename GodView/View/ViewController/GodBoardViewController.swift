@@ -11,8 +11,6 @@ import UIKit
 class GodBoardViewController: BaseViewController {
 
     @IBOutlet weak var tableView: UITableView!
-
-    fileprivate var dayResults: [WolfKillResultOnDay] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,9 +27,9 @@ class GodBoardViewController: BaseViewController {
     }
 
     @IBAction func addDay(_ sender: Any) {
-        let day = dayResults.count+1
-        let res = WolfKillResultOnDay(day: day, deadPlayers: [])
-        dayResults.append(res)
+        let day = WolfKillGameManager.shared.dayResults.count+1
+        let res = WolfKillResultOnDay(day: day)
+        WolfKillGameManager.shared.dayResults.append(res)
         
         tableView.reloadData()
     }
@@ -45,12 +43,12 @@ extension GodBoardViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dayResults.count
+        return WolfKillGameManager.shared.dayResults.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ContentWithNumTableViewCell.identifier, for: indexPath) as! ContentWithNumTableViewCell
-        cell.configWith(result: dayResults[indexPath.row])
+        cell.configWith(result: WolfKillGameManager.shared.dayResults[indexPath.row])
 
         return cell
     }
@@ -68,7 +66,11 @@ extension GodBoardViewController : UITableViewDelegate {
 //        navigationController?.pushViewController(vc, animated: true)
     }
 
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90
+        return UITableViewAutomaticDimension
     }
 }

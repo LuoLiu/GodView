@@ -31,11 +31,11 @@ class ContentWithNumTableViewCell: UITableViewCell {
         numLabel.text = "\(result.day)"
         titleLabel.text = "Day \(result.day)"
         var str = ""
-        for player in result.deadPlayers {
+        for player in WolfKillGameManager.shared.players {
             if str.isEmpty == false {
-                str.append("\n")
+                str.append("，")
             }
-            let roleStr = "\(player.id)号 \(player.role.rawValue) 死亡"
+            let roleStr = "\(player.id)号 \(player.role.rawValue) \(player.status.rawValue)"
             str.append(roleStr)
         }
         detailLabel.text = "\(str)"

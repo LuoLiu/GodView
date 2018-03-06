@@ -17,7 +17,15 @@ enum PlayerType: String {
     case idiot = "白痴"
 }
 
+enum PlayerStatus: String {
+    case live = "存活"
+    case dead_poisoned = "毒死"
+    case dead_killed = "杀死"
+    case out = "出局"
+}
+
 struct PlayerModel {
     var id: Int = 0
     var role: PlayerType = .normal
+    var status: PlayerStatus = .live
 }

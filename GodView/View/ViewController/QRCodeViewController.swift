@@ -12,7 +12,7 @@ class QRCodeViewController: BaseViewController {
 
     @IBOutlet weak var roleLabel: UILabel!
 
-    var player: PlayerModel = PlayerModel(id: 0, role: .normal)
+    var player: PlayerModel = PlayerModel(id: 0, role: .normal, status: .live)
 
     static func instance(player: PlayerModel) -> QRCodeViewController {
         let sb = UIStoryboard(name: .main)
