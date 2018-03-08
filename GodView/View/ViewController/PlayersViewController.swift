@@ -89,7 +89,7 @@ extension PlayersViewController: UICollectionViewDelegate {
 
         switch userMode {
         case .player:
-            let vc = QRCodeViewController.instance(player: player)
+            let vc = PlayerDetailViewController.instance(player: player)
             self.present(vc, animated: true, completion: nil)
         case .god:
             let vc = WolfKillViewController.instance(player: player)

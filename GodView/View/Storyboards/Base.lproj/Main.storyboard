@@ -67,16 +67,16 @@
             </objects>
             <point key="canvasLocation" x="479.19999999999999" y="133.5832083958021"/>
         </scene>
-        <!--Code View Controller-->
+        <!--Player Detail View Controller-->
         <scene sceneID="BWK-k8-YTH">
             <objects>
-                <viewController storyboardIdentifier="QRCodeViewController" automaticallyAdjustsScrollViewInsets="NO" id="dhx-hE-BbQ" customClass="QRCodeViewController" customModule="GodView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlayerDetailViewController" automaticallyAdjustsScrollViewInsets="NO" id="dhx-hE-BbQ" customClass="PlayerDetailViewController" customModule="GodView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YWk-2M-TZ7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70E-lM-fYX">
-                                <rect key="frame" x="157.5" y="318" width="61.5" height="31.5"/>
+                                <rect key="frame" x="157" y="318" width="61.5" height="31.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -224,7 +224,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7c-za-mm4">
-                                <rect key="frame" x="167" y="607" width="40" height="40"/>
+                                <rect key="frame" x="167.5" y="607" width="40" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="RXG-lx-Ljc"/>

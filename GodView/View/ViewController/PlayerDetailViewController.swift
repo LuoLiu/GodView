@@ -1,5 +1,5 @@
 //
-//  QRCodeViewController.swift
+//  PlayerDetailViewController.swift
 //  GodView
 //
 //  Created by LuoLiu on 2017/12/19.
@@ -8,15 +8,15 @@
 
 import UIKit
 
-class QRCodeViewController: BaseViewController {
+class PlayerDetailViewController: BaseViewController {
 
     @IBOutlet weak var roleLabel: UILabel!
 
     var player: PlayerModel = PlayerModel(id: 0, role: .normal, status: .live)
 
-    static func instance(player: PlayerModel) -> QRCodeViewController {
+    static func instance(player: PlayerModel) -> PlayerDetailViewController {
         let sb = UIStoryboard(name: .main)
-        let vc = sb.instantiateViewControllerWithClass(type: QRCodeViewController.self)
+        let vc = sb.instantiateViewControllerWithClass(type: PlayerDetailViewController.self)
         vc.player = player
 
         return vc

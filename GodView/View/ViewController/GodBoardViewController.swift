@@ -60,10 +60,9 @@ extension GodBoardViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
-        AlertHelper.showBaseAlert(title: "开发中......")
-//        let players = WolfKillGameManager.shared.players
-//        let vc = PlayersViewController.instance(players: players, userMode: .god)
+        let vc = GameProcessViewController.instance()
 //        navigationController?.pushViewController(vc, animated: true)
+        present(vc, animated: true, completion: nil)
     }
 
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {

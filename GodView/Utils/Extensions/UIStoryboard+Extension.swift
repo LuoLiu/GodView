@@ -10,6 +10,7 @@ import UIKit
 
 enum StoryboardName: String {
     case main = "Main"
+    case gameProcess = "GameProcess"
 }
 
 extension UIStoryboard {

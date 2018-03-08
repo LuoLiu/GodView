@@ -7,6 +7,12 @@
 //
 
 import Foundation
+import UIKit
+
+struct SizeConst {
+    static let screenHeight = UIScreen.main.bounds.height
+    static let screenwidth = UIScreen.main.bounds.width
+}
 
 struct TilteConst {
     static let playerVC = "身份查看"
